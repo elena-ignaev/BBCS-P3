@@ -5,3 +5,4 @@ function search() {
     var request = document.getElementById("seach-textbox").value;
     // in the form of ?query=whatever window.location.replace();
 }
+
