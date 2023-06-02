@@ -20,15 +20,19 @@ def shown():
     import googlemaps
     import urllib.request
 
+    apikeyfile = open("apikey.txt", 'r')
+    apikey = apikeyfile.readline().strip() 
+    apikeyfile.close() 
+
     # Initialize the Google Maps client with API key
-    gmaps = googlemaps.Client(key='AIzaSyDBXoA4A2VKNeibxkDJayt9TvypZaUmnMk')
+    gmaps = googlemaps.Client(key=apikey) 
 
     # Get place details and retrieve photo reference
     place_name = "Sri Mariamman Temple" #replace with array[i-1]
     place_result = gmaps.places(query=place_name)
     photo_reference = place_result['results'][0]['photos'][0]['photo_reference']
     # Construct URL for photo
-    photo_url = f"https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference={photo_reference}&key=AIzaSyDBXoA4A2VKNeibxkDJayt9TvypZaUmnMk"
+    photo_url = f"https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference={photo_reference}&key="+apikey
     # Get image
     img1 = os.path.join(app.config['UPLOAD_FOLDER'], photo_url)
     
@@ -37,7 +41,7 @@ def shown():
     place_result = gmaps.places(query=place_name)
     photo_reference = place_result['results'][0]['photos'][0]['photo_reference']
     # Construct URL for photo
-    photo_url = f"https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference={photo_reference}&key=AIzaSyDBXoA4A2VKNeibxkDJayt9TvypZaUmnMk"
+    photo_url = f"https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference={photo_reference}&key="+apikey
     # Get image
     img2 = os.path.join(app.config['UPLOAD_FOLDER'], photo_url)
 
@@ -46,7 +50,7 @@ def shown():
     place_result = gmaps.places(query=place_name)
     photo_reference = place_result['results'][0]['photos'][0]['photo_reference']
     # Construct URL for photo
-    photo_url = f"https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference={photo_reference}&key=AIzaSyDBXoA4A2VKNeibxkDJayt9TvypZaUmnMk"
+    photo_url = f"https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference={photo_reference}&key="+apikey
     # Get image
     img3 = os.path.join(app.config['UPLOAD_FOLDER'], photo_url)
 
@@ -56,4 +60,3 @@ def shown():
 
 if __name__ == 'main':
     app.run(debug=True)
-
