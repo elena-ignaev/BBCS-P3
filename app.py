@@ -86,6 +86,36 @@ os.path.join(cur_dir, "TAMLdata.txt")
 # db = sqlite3.connect(db_file) 
 # db.close()
 
+app.route('/', methods=['GET', 'POST'])
+def main():
+    return render_template('homepage.html')
+
+app.route('/suggestions', methods=['GET', 'POST'])
+def shown():
+    return render_template('suggested.html')
+
+
+# google map api -----------------------------------------------------------------------------
+import googlemaps
+import urllib.request
+
+# Initialize the Google Maps client with API key
+gmaps = googlemaps.Client(key='AIzaSyDBXoA4A2VKNeibxkDJayt9TvypZaUmnMk')
+
+# Get place details and retrieve photo reference
+place_name = "Sri Mariamman Temple"
+place_result = gmaps.places(query=place_name)
+photo_reference = place_result['results'][0]['photos'][0]['photo_reference']
+
+# Construct URL for photo
+photo_url = f"https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference={photo_reference}&key=AIzaSyDBXoA4A2VKNeibxkDJayt9TvypZaUmnMk"
+
+# Download photo from constructed URL
+urllib.request.urlretrieve(photo_url, 'location_photo.jpg')
+print("Photo downloaded successfully!")
+# ---------------------------------------------------------------------------------------------
+
+
 if __name__ == '__main__':
     app.run(debug=True) 
     # set debug to False if you are using python IDLE as 
