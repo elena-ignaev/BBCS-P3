@@ -20,8 +20,12 @@ def shown():
 import googlemaps
 import urllib.request
 
+apikeyfile = open("apikey.txt", 'r')
+apikey = apikeyfile.readline().strip() 
+apikeyfile.close() 
+
 # Initialize the Google Maps client with API key
-gmaps = googlemaps.Client(key='AIzaSyDBXoA4A2VKNeibxkDJayt9TvypZaUmnMk')
+gmaps = googlemaps.Client(key=apikey)
 
 for i in range(1,4):
     # Get place details and retrieve photo reference
@@ -30,7 +34,7 @@ for i in range(1,4):
     photo_reference = place_result['results'][0]['photos'][0]['photo_reference']
 
     # Construct URL for photo
-    photo_url = f"https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference={photo_reference}&key=AIzaSyDBXoA4A2VKNeibxkDJayt9TvypZaUmnMk"
+    photo_url = f"https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference={photo_reference}&key="+apikey
 
     path_name = 'static/locationpictures/img' + str(i)
 
