@@ -1,5 +1,5 @@
 body {
-    background-image: url('busses.jpg'); /* Replace 'path/to/image.jpg' with the actual path to your image */
+    background-image: url('images/busses.jpg'); /* Replace 'path/to/image.jpg' with the actual path to your image */
     background-repeat: no-repeat;
     background-size: cover;
   }
