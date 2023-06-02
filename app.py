@@ -163,10 +163,12 @@ if __name__ == "__main__":
 
 
 
-#FLASK PART -----------------------------------------------------------------------------------
+#FLASK PART ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 from flask import Flask, render_template, request 
-import os
-import requests 
+#import os
+#import requests 
+import googlemaps
+#import urllib.request
 
 app = Flask(__name__)
 
@@ -177,8 +179,7 @@ def main():
 @app.route('/suggestions', methods=['GET', 'POST'])
 def shown():
     # getting images from google maps api ------------------------------------------------------------
-    import googlemaps
-    import urllib.request
+    
     apikeyfile = open("apikey.txt", 'r')
     apikey = apikeyfile.readline().strip() 
     apikeyfile.close() 
