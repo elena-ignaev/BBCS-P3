@@ -1,15 +1,19 @@
+import googlemaps
 import urllib.request
-from gmaps_static import GoogleMapsStatic
 
-# Step 1: Install the gmaps-static library by running 'pip install gmaps-static'
+# Step 1: Install the googlemaps library by running 'pip install googlemaps'
 
-# Step 2: Initialize the GoogleMapsStatic client with your API key
-gmaps = GoogleMapsStatic(api_key='YOUR_API_KEY')
+# Step 2: Initialize the Google Maps client with your API key
+gmaps = googlemaps.Client(key='AIzaSyDBXoA4A2VKNeibxkDJayt9TvypZaUmnMk')
 
-# Step 3: Get the static map image of the location
-location_name = 'Marina Bay Sands'
-map_url = gmaps.generate_map(location_name, size=(600, 400), zoom=13)
+# Step 3: Get the place details and retrieve the photo reference
+place_name = "Sri Mariamman Temple"
+place_result = gmaps.places(query=place_name)
+photo_reference = place_result['results'][0]['photos'][0]['photo_reference']
 
-# Step 4: Download the image from the constructed URL
-urllib.request.urlretrieve(map_url, 'location_map.png')
-print("Image downloaded successfully!")
+# Step 4: Construct the URL for the photo
+photo_url = f"https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference={photo_reference}&key=AIzaSyDBXoA4A2VKNeibxkDJayt9TvypZaUmnMk"
+
+# Step 5: Download the photo from the constructed URL
+urllib.request.urlretrieve(photo_url, 'location_photo.jpg')
+print("Photo downloaded successfully!")
