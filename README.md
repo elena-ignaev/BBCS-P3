@@ -8,8 +8,8 @@
 ### An important note is that the descriptions will be generated based on what the users put in as well, not merely the destiantion, and it is planned to be more based on input rather than destinations recommended, to increase personalization and make it (hopefully) better than merely showing a fixed description each destination. 
 ## Usage of the tool 
 ### At the homepage (picture below), you will type in a search query into the search bar, and it will redirect you to the search page. 
-### ![Image of homepage of website](/static/images/homepage.jpeg) 
+### ![Image of homepage of website](/prototyping/homepage.jpeg) 
 ### The following is an image of the search page: 
-### ![Image of search page of website](/static/images/searchpage.jpeg) 
+### ![Image of search page of website](/prototyping/searchpage.jpeg) 
 ## Ending words 
 ### We hope that this project is helpful for the travel industry, and will turn out useful for users. 
