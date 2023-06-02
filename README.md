@@ -11,5 +11,7 @@
 ### ![Image of homepage of website](/prototyping/homepage.jpeg) 
 ### The following is an image of the search page: 
 ### ![Image of search page of website](/prototyping/searchpage.jpeg) 
+## Running the WebApp 
+### There are two missing files in this repository. The first of those is the API key for google maps, which is stored in a file named "apikey.txt" in the root folder. The second is a Word2Vec model released by google, named GoogleNews-vectors-negative300.bin in the root folder, and it can be downloaded at this link: [https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit?resourcekey=0-wjGZdNAUop6WykTtMip30g]. 
 ## Ending words 
 ### We hope that this project is helpful for the travel industry, and will turn out useful for users. 
