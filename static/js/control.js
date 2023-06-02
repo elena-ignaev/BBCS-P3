@@ -15,15 +15,12 @@ function search() {
     // redirect by changing link address of webpage
     window.location.replace(window.location.href + "suggestions")  //+ 'user input' --> query for flask application
     // edit html file, text content wait for model 2 to be completed
-    pic1.src = 'static/locationpictures/img1';
     loc1.textContent = "";
     des1.textContent = "";
 
-    pic2.src = 'static/locationpictures/img2';
     loc2.textContent = "";
     des2.textContent = "";
 
-    pic3.src = 'static/locationpictures/img3';
     loc3.textContent = "";
     des3.textContent = "";
 }
