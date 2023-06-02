@@ -13,20 +13,18 @@ const loc3 = document.getElementById('loc3');
 const des3 = document.getElementById('des3');
 function search() {
     // redirect by changing link address of webpage
-    window.location.replace(window.location.href)  //+ 'user input' --> query for flask application
-    // somehow receive data from python
-    // edit html file
-    pic1.src = "";
+    window.location.replace(window.location.href + "suggestions")  //+ 'user input' --> query for flask application
+    // edit html file, text content wait for model 2 to be completed
+    pic1.src = 'static/locationpictures/img1';
     loc1.textContent = "";
     des1.textContent = "";
 
-    pic2.src = "";
+    pic2.src = 'static/locationpictures/img2';
     loc2.textContent = "";
     des2.textContent = "";
 
-    pic3.src = "";
+    pic3.src = 'static/locationpictures/img3';
     loc3.textContent = "";
     des3.textContent = "";
-    // elements: search-textbox, search-button, pic1, pic2, pic3, loc1, loc2, loc3, des1, des2, des3
 }
 
