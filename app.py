@@ -33,7 +33,7 @@ def shown():
     # Construct URL for photo
     photo_url = f"https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference={photo_reference}&key={apikey}"
     # Get image
-    img1 = os.path.join(app.config['UPLOAD_FOLDER'], photo_url)
+    img1 = photo_url
     
     # Get place details and retrieve photo reference
     place_name = "Sri Mariamman Temple" #replace with array[i-1]
@@ -42,7 +42,7 @@ def shown():
     # Construct URL for photo
     photo_url = f"https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference={photo_reference}&key={apikey}"
     # Get image
-    img2 = os.path.join(app.config['UPLOAD_FOLDER'], photo_url)
+    img2 = photo_url
 
     # Get place details and retrieve photo reference
     place_name = "Sri Mariamman Temple" #replace with array[i-1]
@@ -51,7 +51,7 @@ def shown():
     # Construct URL for photo
     photo_url = f"https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference={photo_reference}&key={apikey}"
     # Get image
-    img3 = os.path.join(app.config['UPLOAD_FOLDER'], photo_url)
+    img3 = photo_url
     
     return render_template('suggested.html', pic1=img1, pic2=img2, pic3=img3)
     # ---------------------------------------------------------------------------------------------
