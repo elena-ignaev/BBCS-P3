@@ -8,14 +8,13 @@
 from flask import Flask, render_template
 app = Flask(__name__)
 
-app.route('/', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def main():
     return render_template('homepage.html')
 
-app.route('/suggestions', methods=['GET', 'POST'])
+@app.route('/suggestions', methods=['GET', 'POST'])
 def shown():
     return render_template('suggested.html')
-app.run(debug=True) 
 
 # getting images from google maps api ------------------------------------------------------------
 import googlemaps
@@ -39,4 +38,6 @@ for i in range(1,4):
     urllib.request.urlretrieve(photo_url, path_name)
     # ---------------------------------------------------------------------------------------------
 
+if __name__ == 'main':
+    app.run(debug=True)
 
