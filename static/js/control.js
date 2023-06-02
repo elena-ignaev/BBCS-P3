@@ -1,9 +1,32 @@
 const user_input = document.getElementById('search-textbox').value;
+
+const pic1 = document.getElementById('pic1');
+const loc1 = document.getElementById('loc1');
+const des1 = document.getElementById('des1');
+
+const pic2 = document.getElementById('pic2');
+const loc2 = document.getElementById('loc2');
+const des2 = document.getElementById('des2');
+
+const pic3 = document.getElementById('pic3');
+const loc3 = document.getElementById('loc3');
+const des3 = document.getElementById('des3');
 function search() {
-    // in the form of ?query=whatever window.location.replace(window.location.href);
     // redirect by changing link address of webpage
+    window.location.replace(window.location.href)  //+ 'user input' --> query for flask application
     // somehow receive data from python
     // edit html file
+    pic1.src = "";
+    loc1.textContent = "";
+    des1.textContent = "";
+
+    pic2.src = "";
+    loc2.textContent = "";
+    des2.textContent = "";
+
+    pic3.src = "";
+    loc3.textContent = "";
+    des3.textContent = "";
     // elements: search-textbox, search-button, pic1, pic2, pic3, loc1, loc2, loc3, des1, des2, des3
 }
 
