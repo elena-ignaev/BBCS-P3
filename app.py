@@ -6,6 +6,8 @@
 
 #FLASK PART -------------------------------------------
 from flask import Flask, render_template
+import os
+
 app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
@@ -14,30 +16,44 @@ def main():
 
 @app.route('/suggestions', methods=['GET', 'POST'])
 def shown():
-    return render_template('suggested.html')
+    # getting images from google maps api ------------------------------------------------------------
+    import googlemaps
+    import urllib.request
+    apikeyfile = open("apikey.txt", 'r')
+    apikey = apikeyfile.readline().strip() 
+    apikeyfile.close() 
 
-# getting images from google maps api ------------------------------------------------------------
-import googlemaps
-import urllib.request
+    # Initialize the Google Maps client with API key
+    gmaps = googlemaps.Client(key=apikey)
 
-# Initialize the Google Maps client with API key
-gmaps = googlemaps.Client(key='AIzaSyDBXoA4A2VKNeibxkDJayt9TvypZaUmnMk')
-
-for i in range(1,4):
     # Get place details and retrieve photo reference
     place_name = "Sri Mariamman Temple" #replace with array[i-1]
     place_result = gmaps.places(query=place_name)
     photo_reference = place_result['results'][0]['photos'][0]['photo_reference']
-
     # Construct URL for photo
-    photo_url = f"https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference={photo_reference}&key=AIzaSyDBXoA4A2VKNeibxkDJayt9TvypZaUmnMk"
+    photo_url = f"https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference={photo_reference}&key={apikey}"
+    # Get image
+    img1 = photo_url
+    
+    # Get place details and retrieve photo reference
+    place_name = "Sri Mariamman Temple" #replace with array[i-1]
+    place_result = gmaps.places(query=place_name)
+    photo_reference = place_result['results'][0]['photos'][0]['photo_reference']
+    # Construct URL for photo
+    photo_url = f"https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference={photo_reference}&key={apikey}"
+    # Get image
+    img2 = photo_url
 
-    path_name = 'static/locationpictures/img' + str(i)
-
-    # Download photo from constructed URL
-    urllib.request.urlretrieve(photo_url, path_name)
+    # Get place details and retrieve photo reference
+    place_name = "Sri Mariamman Temple" #replace with array[i-1]
+    place_result = gmaps.places(query=place_name)
+    photo_reference = place_result['results'][0]['photos'][0]['photo_reference']
+    # Construct URL for photo
+    photo_url = f"https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference={photo_reference}&key={apikey}"
+    # Get image
+    img3 = photo_url
+    
+    return render_template('suggested.html', pic1=img1, pic2=img2, pic3=img3)
     # ---------------------------------------------------------------------------------------------
 
-if __name__ == 'main':
-    app.run(debug=True)
-
+app.run(debug=True)
