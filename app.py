@@ -56,5 +56,4 @@ def shown():
     return render_template('suggested.html', pic1=img1, pic2=img2, pic3=img3)
     # ---------------------------------------------------------------------------------------------
 
-if __name__ == 'main':
-    app.run(debug=True)
+app.run(debug=True)
