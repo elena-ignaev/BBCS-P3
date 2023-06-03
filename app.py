@@ -225,7 +225,7 @@ def shown():
     txt2 = generateDesc(query, array[1]) 
     txt3 = generateDesc(query, array[2]) 
     print(img1)
-    return render_template('suggested.html', pic1=img1, pic2=img2, pic3=img3, loc1=array[0], loc2=array[1], loc3=array[2], desc1=txt1, desc2=txt2, desc3=txt3)
+    return render_template('suggested.html', pic1=img1, pic2=img2, pic3=img3, loc1=array[0], loc2=array[1], loc3=array[2], desc1=txt1, desc2=txt2, desc3=txt3, inpt=query)
     # ---------------------------------------------------------------------------------------------
 
 if __name__ == "__main__": 
