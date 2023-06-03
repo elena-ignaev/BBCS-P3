@@ -8,9 +8,9 @@
 ### An important note is that the descriptions will be generated based on what the users put in as well, not merely the destiantion, and it is planned to be more based on input rather than destinations recommended, to increase personalization and make it (hopefully) better than merely showing a fixed description each destination. 
 ## Usage of the tool 
 ### At the homepage (picture below), you will type in a search query into the search bar, and it will redirect you to the search page. 
-### ![Image of homepage of website](/prototyping/homepage.jpeg) 
+### ![Image of homepage of website](/prototyping/homepage.jpg) 
 ### The following is an image of the search page: 
-### ![Image of search page of website](/prototyping/searchpage.jpeg) 
+### ![Image of search page of website](/prototyping/searchpage.jpg) 
 ## Running the WebApp 
 ### There is one missing file in this repository, which is a Word2Vec model released by google, to be named GoogleNews-vectors-negative300.bin in the root folder, and it can be downloaded at this link: [https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit?resourcekey=0-wjGZdNAUop6WykTtMip30g]. (It was not included in this repository since it was a very large file)
 ### To run this WebApp, download this repository and run app.py. Note that it will print out some loading messages. 
