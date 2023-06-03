@@ -10,8 +10,9 @@ if __name__ == "__main__":
     nltk.download('stopwords')
     nltk.download('punkt')
     nltk.download('omw-1.4')
-    import gensim
-    from gensim.models import Word2Vec
+    nltk.download('wordnet')
+    #import gensim
+    #from gensim.models import Word2Vec
     from gensim.models import KeyedVectors 
     #from sklearn.manifold import TSNE
     #from sklearn.feature_extraction.text import TfidfVectorizer # if we're using word vectorization ig 
