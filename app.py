@@ -171,6 +171,17 @@ from flask import Flask, render_template, request
 import googlemaps
 #import urllib.request
 
+def get_image_location(name):
+    for index in range(0, 245):
+        print(df[0][index])
+        print(name)
+        print(df[0][index] == name)
+        if df[0][index] == name:
+            image_index = index + 1
+            image_url = "locationpictures/img" + str(image_index) + ".jpg"
+            return image_url
+    return None
+
 app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
@@ -195,17 +206,6 @@ def shown():
     #-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     df = pd.read_csv("LocationData.csv")
-
-    def get_image_location(name):
-        for index in range(0, 245):
-            print(df[0][index])
-            print(name)
-            print(df[0][index] == name)
-            if df[0][index] == name:
-                image_index = index + 1
-                image_url = "locationpictures/img" + str(image_index) + ".jpg"
-                return image_url
-        return None
 
     img1 = get_image_location(array[0])
     img2 = get_image_location(array[1])
