@@ -67,7 +67,8 @@ if __name__ == "__main__":
     #Load locations and corresponding tags 
     locTags = {}
     values = [] 
-    for x in range(1, len(rawLocs)-2):
+    for x in range(len(rawLocs)):
+        if rawLocs[x].strip() == "": continue 
         temp = rawLocs[x].split(',')
         temp2 = [] 
         for i in range(1, len(temp)):
