@@ -178,7 +178,6 @@ def main():
 
 @app.route('/suggestions', methods=['GET', 'POST'])
 def shown():
-    # getting images from google maps api ------------------------------------------------------------
     
     apikeyfile = open("apikey.txt", 'r')
     apikey = apikeyfile.readline().strip() 
@@ -193,16 +192,16 @@ def shown():
     array = gettopthree(request.args.get('query'))
 
     # Get place details and retrieve photo reference
-    place_name = array[0]+" Singapore" #replace with array[i-1]
+    place_name = array[0]+" Singapore" 
     place_result = gmaps.places(query=place_name)
     photo_reference = place_result['results'][0]['photos'][0]['photo_reference']
     # Construct URL for photo
     photo_url = f"https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference={photo_reference}&key={apikey}"
     # Get image
     img1 = photo_url
-    
+
     # Get place details and retrieve photo reference
-    place_name = array[1]+" Singapore" #replace with array[i-1]
+    place_name = array[1]+" Singapore" 
     place_result = gmaps.places(query=place_name)
     photo_reference = place_result['results'][0]['photos'][0]['photo_reference']
     # Construct URL for photo
