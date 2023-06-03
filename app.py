@@ -162,13 +162,17 @@ if __name__ == "__main__":
     #SECOND AI: ----------------------------------------------------------------------------
 
 
+def generateDesc(user_input, destination): 
+    text = ""; # replace with ai; user input will be user input text, destination is destination name 
+    return text 
+
 
 
 #FLASK PART ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 from flask import Flask, render_template, request 
 #import os
 #import requests 
-import googlemaps
+#import googlemaps
 import pandas as pd
 #import urllib.request
 
@@ -194,17 +198,18 @@ def main():
 @app.route('/suggestions', methods=['GET', 'POST'])
 def shown():
     
-    apikeyfile = open("apikey.txt", 'r')
-    apikey = apikeyfile.readline().strip() 
-    apikeyfile.close() 
+    #apikeyfile = open("apikey.txt", 'r')
+    #apikey = apikeyfile.readline().strip() 
+    #apikeyfile.close() 
 
     # Initialize the Google Maps client with API key
-    gmaps = googlemaps.Client(key=apikey)
+    #gmaps = googlemaps.Client(key=apikey)
 
     if not ('query' in request.args): 
         return "Enter query", 400 
     
-    array = gettopthree(request.args.get('query'))
+    query = request.args.get('query')
+    array = gettopthree(query)
 
     #-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -216,9 +221,9 @@ def shown():
 
     #do stuff with second AI here ------------------------------------------------------------------------------------------------
     
-    txt1 = "This is a fantastic description" 
-    txt2 = "This is a fantastic description" 
-    txt3 = "This is a fantastic description" 
+    txt1 = generateDesc(query, array[0]) 
+    txt2 = generateDesc(query, array[1]) 
+    txt3 = generateDesc(query, array[2]) 
 
     return render_template('suggested.html', pic1=img1, pic2=img2, pic3=img3, loc1=array[0], loc2=array[1], loc3=array[2], desc1=txt1, desc2=txt2, desc3=txt3)
     # ---------------------------------------------------------------------------------------------
