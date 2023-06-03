@@ -169,7 +169,10 @@ from flask import Flask, render_template, request
 #import os
 #import requests 
 import googlemaps
+import pandas as pd
 #import urllib.request
+
+df = pd.read_csv("LocationData.csv")
 
 def get_image_location(name):
     for index in range(0, 245):
