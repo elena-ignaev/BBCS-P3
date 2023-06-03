@@ -185,7 +185,7 @@ def get_image_location(name):
         print(df[0][index] == name)
         if df[0][index] == name:
             image_index = index + 1
-            image_url = "locationpictures/img" + str(image_index) + ".jpg"
+            image_url = "static/locationpictures/img" + str(image_index) + ".jpg"
             return image_url
     return None
 
@@ -224,7 +224,7 @@ def shown():
     txt1 = generateDesc(query, array[0]) 
     txt2 = generateDesc(query, array[1]) 
     txt3 = generateDesc(query, array[2]) 
-
+    print(img1)
     return render_template('suggested.html', pic1=img1, pic2=img2, pic3=img3, loc1=array[0], loc2=array[1], loc3=array[2], desc1=txt1, desc2=txt2, desc3=txt3)
     # ---------------------------------------------------------------------------------------------
 
