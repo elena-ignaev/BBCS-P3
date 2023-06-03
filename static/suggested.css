@@ -12,6 +12,7 @@ body {
     justify-content: space-between;
     padding: 5px;
   }
+  
 
   .left-label {
     padding-left: 5px;
@@ -32,7 +33,7 @@ body {
 }
 
 .space{
-    margin-bottom: 0.5%;
+    margin-bottom: 0.2%;
 }
 
 .query{
@@ -45,13 +46,28 @@ body {
 }
 
 .repeated-unit {
-    width: 20%;
-    text-align: center;
-    padding: 20px;
-    box-sizing: border-box;
-    display: flex; /* Add flex display */
-    flex-direction: column; /* Align items vertically */
-    align-items: center; /* Center items horizontally */
+  width: 20%;
+  position: relative;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid white; /* Add border style */
+  background-color: black;
+  border-radius: 10px;
+}
+
+.repeated-space {
+  width: 20%;
+  position: relative;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .image-wrapper {
@@ -61,6 +77,16 @@ body {
     display: flex; /* Add flex display */
     align-items: center; /* Center items vertically */
     justify-content: center; /* Center items horizontally */
+}
+
+.image-container {
+  width: 350px;
+  height: 200px;
+  overflow: hidden;
+  object-fit: fill;
+  display: flex; /* Add flex display */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
 }
 
 .image-wrapper img {
@@ -77,10 +103,11 @@ body {
     display: flex; /* Add flex display */
     align-items: center; /* Center items vertically */
     justify-content: center; /* Center items horizontally */
+    margin-top: 10px;
 }
 
 .overlay img {
-    width: 125%;
+    width: 115%;
     height: auto;
     display: block;
     display: flex; /* Add flex display */
@@ -98,7 +125,7 @@ body {
     background-color: transparent;
     color: white;
     font-family: Helvetica;
-    padding: 10px;
+    margin-top: 7px;
     font-size: 25px;
     font-weight: bold;
     word-wrap: break-word;
@@ -109,16 +136,15 @@ body {
 }
 
 .desc {
-    margin-top: 25px;
+    margin-bottom: 40px;
     width: 100%;
     height: 100px;
     background-color: transparent;
     color: white;
     font-family: Helvetica;
-    padding: 10px;
     font-size: 18px;
-    font-weight: bold;
     word-wrap: break-word;
+    text-align: left;
 }
 
 
@@ -202,3 +228,4 @@ body {
     padding: 5px;
   }
   
+ 
