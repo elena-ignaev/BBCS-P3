@@ -112,6 +112,11 @@ if __name__ == "__main__":
         distances = vectorizer.distances(target_word, words) #ordered based on orders of vocabulary it seems
         return (distances-np.min(distances))/(np.max(distances)-np.min(distances))
 
+#set list of items to avoid 
+avoid = [15, 46, 244]
+for avoidAdder in range(88, 187):
+    avoid.append(avoidAdder)
+
     #function to test this 
     def gettopthree(text):
         global training
@@ -148,9 +153,6 @@ if __name__ == "__main__":
         locations = list(locTags.keys())
         res = []
         i = 0 
-        avoid = [15, 46, 244]
-        for avoidAdder in range(88, 187):
-            avoid.append(i)
         while i < 3:
             indices = []
             for idx, value in enumerate(chances):
