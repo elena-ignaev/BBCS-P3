@@ -172,7 +172,7 @@ import googlemaps
 import pandas as pd
 #import urllib.request
 
-df = pd.read_csv("LocationData.csv")
+df = pd.read_csv("LocationData.csv", header=None)
 
 def get_image_location(name):
     for index in range(0, 245):
