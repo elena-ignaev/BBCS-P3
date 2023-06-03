@@ -11,6 +11,7 @@ body {
   background-image: url('images/background.png'); /* Replace 'path/to/image.jpg' with the actual path to your image */
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden;
 }
 
 

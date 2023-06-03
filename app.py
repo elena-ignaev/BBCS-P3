@@ -148,10 +148,15 @@ if __name__ == "__main__":
         locations = list(locTags.keys())
         res = []
         i = 0 
+        avoid = [15, 46, 244]
+        for avoidAdder in range(88, 187):
+            avoid.append(i)
         while i < 3:
             indices = []
             for idx, value in enumerate(chances):
                 if value == s[-1-i]:
+                    if idx in avoid:
+                        continue
                     indices.append(idx)
             while i < 3 and len(indices) > 0:
                 res.append(list(locTags.keys())[indices[-1]])
@@ -164,7 +169,7 @@ if __name__ == "__main__":
 df = pd.read_csv("LocationData.csv", header=None)
 
 def generateDesc(name):
-    for index in range(0, 245):
+    for index in range(0, df.shape[0]):
         if df[0][index] == name:
             line_num = index + 1
             with open("desc.txt",'r') as file:
@@ -186,7 +191,7 @@ import pandas as pd
 
 
 def get_image_location(name):
-    for index in range(0, 245):
+    for index in range(0, df.shape[0]):
         if df[0][index] == name:
             image_index = index + 1
             image_url = "static/locationpictures/img" + str(image_index) + ".jpg"
@@ -216,7 +221,8 @@ def shown():
     array = gettopthree(query)
 
     #-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+    print("HELLLLOOOO")
+    print(array)
     img1 = get_image_location(array[0])
     img2 = get_image_location(array[1])
     img3 = get_image_location(array[2])
