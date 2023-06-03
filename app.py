@@ -161,12 +161,15 @@ if __name__ == "__main__":
 
     #SECOND AI: ----------------------------------------------------------------------------
 
+desc_dataframe = pd.read_csv("desc.txt")
 
-def generateDesc(user_input, destination): 
-    text = ""; # replace with ai; user input will be user input text, destination is destination name 
-    return text 
-
-
+def generateDesc(desc_dataframe, name):
+    for index in range(0, 245):
+        if desc_dataframe[index] == name:
+            desc_index = index + 1
+            return desc_dataframe[desc_index]
+    return None  
+    
 
 #FLASK PART ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 from flask import Flask, render_template, request 
@@ -176,14 +179,11 @@ from flask import Flask, render_template, request
 import pandas as pd
 #import urllib.request
 
-df = pd.read_csv("LocationData.csv", header=None)
+pics_df = pd.read_csv("LocationData.csv", header=None)
 
 def get_image_location(name):
     for index in range(0, 245):
-        print(df[0][index])
-        print(name)
-        print(df[0][index] == name)
-        if df[0][index] == name:
+        if pics_df[0][index] == name:
             image_index = index + 1
             image_url = "static/locationpictures/img" + str(image_index) + ".jpg"
             return image_url
@@ -213,17 +213,15 @@ def shown():
 
     #-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-    df = pd.read_csv("LocationData.csv")
-
     img1 = get_image_location(array[0])
     img2 = get_image_location(array[1])
     img3 = get_image_location(array[2])
 
     #do stuff with second AI here ------------------------------------------------------------------------------------------------
     
-    txt1 = generateDesc(query, array[0]) 
-    txt2 = generateDesc(query, array[1]) 
-    txt3 = generateDesc(query, array[2]) 
+    txt1 = generateDesc(array[0]) 
+    txt2 = generateDesc(array[1]) 
+    txt3 = generateDesc(array[2]) 
     print(img1)
     return render_template('suggested.html', searchquery=query, pic1=img1, pic2=img2, pic3=img3, loc1=array[0], loc2=array[1], loc3=array[2], desc1=txt1, desc2=txt2, desc3=txt3)
     # ---------------------------------------------------------------------------------------------
