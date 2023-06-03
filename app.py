@@ -192,32 +192,24 @@ def shown():
     
     array = gettopthree(request.args.get('query'))
 
-    # Get place details and retrieve photo reference
-    place_name = array[0]+" Singapore" 
-    place_result = gmaps.places(query=place_name)
-    photo_reference = place_result['results'][0]['photos'][0]['photo_reference']
-    # Construct URL for photo
-    photo_url = f"https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference={photo_reference}&key={apikey}"
-    # Get image
-    img1 = photo_url
+    #-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-    # Get place details and retrieve photo reference
-    place_name = array[1]+" Singapore" 
-    place_result = gmaps.places(query=place_name)
-    photo_reference = place_result['results'][0]['photos'][0]['photo_reference']
-    # Construct URL for photo
-    photo_url = f"https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference={photo_reference}&key={apikey}"
-    # Get image
-    img2 = photo_url
+    df = pd.read_csv("LocationData.csv")
 
-    # Get place details and retrieve photo reference
-    place_name = array[2]+" Singapore" #replace with array[i-1]
-    place_result = gmaps.places(query=place_name)
-    photo_reference = place_result['results'][0]['photos'][0]['photo_reference']
-    # Construct URL for photo
-    photo_url = f"https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference={photo_reference}&key={apikey}"
-    # Get image
-    img3 = photo_url
+    def get_image_location(name):
+        for index in range(0, 245):
+            print(df[0][index])
+            print(name)
+            print(df[0][index] == name)
+            if df[0][index] == name:
+                image_index = index + 1
+                image_url = "locationpictures/img" + str(image_index) + ".jpg"
+                return image_url
+        return None
+
+    img1 = get_image_location(array[0])
+    img2 = get_image_location(array[1])
+    img3 = get_image_location(array[2])
 
     #do stuff with second AI here ------------------------------------------------------------------------------------------------
     
