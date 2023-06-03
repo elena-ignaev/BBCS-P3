@@ -161,13 +161,18 @@ if __name__ == "__main__":
 
     #SECOND AI: ----------------------------------------------------------------------------
 
-desc_dataframe = pd.read_csv("desc.txt")
+df = pd.read_csv("LocationData.csv", header=None)
 
-def generateDesc(desc_dataframe, name):
+def generateDesc(name):
     for index in range(0, 245):
-        if desc_dataframe[index] == name:
-            desc_index = index + 1
-            return desc_dataframe[desc_index]
+        if df[0][index] == name:
+            line_num = index + 1
+            with open("desc.txt",'r') as file:
+                line_count=0
+                for line in file:
+                    line_count += 1
+                    if line_count == line_num:
+                        return line
     return None  
     
 
@@ -179,11 +184,10 @@ from flask import Flask, render_template, request
 import pandas as pd
 #import urllib.request
 
-pics_df = pd.read_csv("LocationData.csv", header=None)
 
 def get_image_location(name):
     for index in range(0, 245):
-        if pics_df[0][index] == name:
+        if df[0][index] == name:
             image_index = index + 1
             image_url = "static/locationpictures/img" + str(image_index) + ".jpg"
             return image_url
