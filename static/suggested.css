@@ -31,7 +31,16 @@ body {
 }
 
 .space{
-    margin-bottom: 5%;
+    margin-bottom: 2%;
+}
+
+.query{
+    color: white;
+    font-family: Helvetica;
+    font-size: 25px;
+    height: auto;
+    width: 100%;
+    text-align: center;
 }
 
 .repeated-unit {

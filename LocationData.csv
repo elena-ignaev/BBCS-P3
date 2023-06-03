@@ -13,7 +13,7 @@ Escape Hunt Singapore,Escape Room,Puzzle,Mystery,Adventure,Teamwork,Thriller,Exc
 Mainland Tropical Fish Farm,Fish Farm,Tropical,Fish,Aquatic,Creatures,Education,Nature,Family-Friendly,Aquarium
 D'Best Recreation Fishing,Fishing,Fishing,Recreation,Relaxation,Nature,Serene,Outdoor,Peaceful,Hobby
 The Fishing Paradise at Bottle Tree Park,Fishing,Fishing,Recreation,Nature,Serene,Outdoor,Relaxation,Peaceful,Family-Friendly
-Wave House Sentosa,FlowRider,Flowboarding,Surfing,Adventure,Watersports,Fun,Outdoor,Entertainment,Family-Friendly
+Wave House Sentosa,FlowRider,Flowboarding,Surfing,Adventure,Watersports,Thrill,Outdoor,Unique,Family-Friendly
 Hawker Centres,Food Courts,Local,Food,Culinary,Affordable,Authentic,Street,Food,Cultural
 Lau Pa Sat,Food Market,Local,Food,Satay,Hawker,Centre,Cultural,Dining,Night
 Chinese Garden,Garden,Chinese,Architecture,Serene,Pagodas,Lake,Bonsai,Cultural,Botanical
@@ -96,7 +96,7 @@ Jaan by Kirk Westaway,Restaurant,British,Cuisine,Skyline,Views,Fine,Dining,Moder
 Candlenut,Restaurant,Peranakan,Cuisine,Modern,Interpretation,Heritage,Sharing,Plates,Spices
 CUT by Wolfgang Puck,Restaurant,Steakhouse,Modern,Fine,Dining,Premium,Cuts,Grilled,Meats
 Shinji by Kanesaka,Restaurant,Sushi,Omakase,Japanese,Cuisine,Authentic,Fresh,Ingredients,Traditional
-Waku Ghin,Restaurant,Japanese-European,Fine,Dining,Omakase,Interactive,Chef's,Table,Multi-Course
+Waku Ghin,Restaurant,Japanese-European,Fine,Dining,Omakase,Interactive,Chef,Table,Multi-Course
 Rhubarb Le Restaurant,Restaurant,French,Cuisine,Fine,Dining,Modern,Tasting,Menu,Artistic
 Cheek Bistro,Restaurant,Modern,Australian,Bistro,Casual,Dining,Wine,Bar,Creative
 Meta,Restaurant,Innovative,Modern,European,Tasting,Menu,Artistic,Culinary,Experience
@@ -132,7 +132,7 @@ The Clifford Pier,Restaurant,Local,Cuisine,Heritage,Waterfront,Dining,Colonial,C
 Open Farm Community,Restaurant,Farm-to-Table,Organic,Garden,Views,Casual,Dining,Sustainable,Relaxing
 Akira Back,Restaurant,Japanese-Korean,Fusion,Modern,Trendy,Innovative,Creative,Dishes,Vibrant
 Morsels,Restaurant,Fusion,Cuisine,Small,Plates,Creative,Dishes,Innovative,Cozy
-The Summerhouse,Restaurant,Farm-to-Table,Garden,Dining,Nature-Inspired,Rustic,Relaxed,Casual,Seasonal
+The Summerhouse,Restaurant,Farm-to-Table,Fresh,Dining,Nature-Inspired,Rustic,Relaxed,Food,Seasonal
 Sichuan Dou Hua,Restaurant,Sichuan,Cuisine,Fine,Dining,Authentic,Dim,Sum,Spicy
 Jumbo Seafood,Restaurant,Seafood,Chilli,Crab,Black,Pepper,Crab,Local,Cuisine
 The Dempsey Cookhouse & Bar,Restaurant,Modern,European,Chic,Stylish,Sophisticated,Contemporary,Elegant,Artistic
@@ -152,13 +152,13 @@ Labyrinth,Restaurant,Modern,Singaporean,Cuisine,Innovative,Creative,Dishes,Fusio
 Gunther's,Restaurant,French,Cuisine,Fine,Dining,Classic,Elegant,Sophisticated,Gastronomic
 The Naked Finn,Restaurant,Seafood,Fresh,Produce,Minimalist,Simple,Authentic,Casual,Rustic
 Potato Head Singapore,Restaurant,Asian,Cuisine,Burger,Joint,Casual,Dining,Vibrant,Lively
-Open Door Policy,Restaurant,Modern,European,Casual,Dining,Farm-to-Table,Creative,Dishes,Vegetarian-Friendly
+The Butchers Wife,Restaurant,Modern,European,Relaxed,Dining,Farm-to-Table,Creative,Dishes,Vegetarian-Friendly
 Summer Pavilion,Restaurant,Cantonese,Cuisine,Fine,Dining,Michelin,Star,Elegant,Sophisticated
 Table65,Restaurant,Modern,European,Fine,Dining,Interactive,Innovative,Experimental,Molecular
 Baba Chews Bar and Eatery,Restaurant,Peranakan,Cuisine,Modern,Interpretation,Casual,Dining,Cosy,Friendly
 Butcher Boy,Restaurant,Asian,Fusion,Small,Plates,Contemporary,Creative,Dishes,Lively
 Thevar,Restaurant,Modern,Indian,Cuisine,Innovative,Creative,Dishes,Contemporary,Vibrant
-Roketto Izakaya,Restaurant,Japanese,Izakaya,Casual,Dining,Lively,Vibrant,Fun,Authentic
+Roketto Izakaya,Restaurant,Japanese,Izakaya,Casual,Dining,Lively,Vibrant,Food,Authentic
 The Lokal,Restaurant,Modern,Australian,Cuisine,Casual,Dining,Brunch,Friendly,Relaxed
 FOC Sentosa,Restaurant,Mediterranean,Cuisine,Beachfront,Dining,Casual,Lively,Vibrant,Sea
 Summerlong,Restaurant,Mediterranean,Cuisine,Beachfront,Dining,Casual,Lively,Vibrant,Sea
@@ -174,7 +174,7 @@ The Halia,Restaurant,Modern,European,Casual,Dining,Garden,Dining,Nature-Inspired
 Alley on 25,Restaurant,Multi-Cuisine,Casual,Dining,Vibrant,Lively,Contemporary,Stylish,Relaxed
 The Masses,Restaurant,Modern,European,Affordable,Casual,Dining,Creative,Dishes,Contemporary
 Spago Dining Room by Wolfgang Puck,Restaurant,Modern,European,Fine,Dining,Sky,High,Views,Sophisticated
-Meatsmith,Restaurant,Barbecue,American,Cuisine,Casual,Dining,Lively,Fun,Flavorful
+Meatsmith,Restaurant,Barbecue,American,Cuisine,Casual,Dining,Lively,Meat,Flavorful
 The Pelican,Restaurant,Seafood,Casual,Dining,Waterfront,Dining,Lively,Vibrant,Stylish
 Neon Pigeon,Restaurant,Japanese,Cuisine,Izakaya,Casual,Dining,Lively,Vibrant,Trendy
 Bee's Knees at The Garage,Restaurant,Casual,Dining,Garden,Dining,Nature-Inspired,Relaxed,Fresh,Ingredients
@@ -182,14 +182,14 @@ Pasta Bar,Restaurant,Italian,Cuisine,Casual,Dining,Pasta,Affordable,Lively,Vibra
 Symmetry,Restaurant,Modern,European,Cuisine,Casual,Dining,Brunch,Cosy,Relaxed
 Standing Sushi Bar,Restaurant,Japanese,Cuisine,Sushi,Casual,Dining,Affordable,Authentic,Cozy
 The Coconut Club,Restaurant,Nasi,Lemak,Local,Cuisine,Casual,Dining,Affordable,Authentic
-Little Island Brewing Co.,Restaurant,Craft,Beer,Casual,Dining,Lively,Vibrant,Relaxed,Fun
+Little Island Brewing Co.,Restaurant,Craft,Beer,Casual,Dining,Lively,Vibrant,Relaxed,Drinks
 The Marmalade Pantry Novena,Restaurant,Modern,Comfort,Food,Casual,Dining,Brunch,Desserts,Cosy
 The White Rabbit @ Dempsey,Restaurant,European,Cuisine,Classic,Elegant,Sophisticated,Whimsical,Garden,Views
 Singapore River,River,Riverfront,Riverside,Dining,Boat,Tours,Scenic,Waterfront,Night
 Singapore River Cruise,River Tour,River,Sightseeing,Historical,Landmarks,Boat,Tour,Night,Cruise
 Clarke Quay,Riverside Promenade,Nightlife,Dining,Entertainment,Riverfront,Vibrant,Bars,Music,Scenic
 River Valley Road,Road,Riverside,Residential,Dining,Nightlife,Bars,Cityscape,Urban,Expatriate
-Singapore Science Centre,Science Museum,Science,Exhibitions,Interactive,Education,Innovation,Technology,Fun,Learning
+Singapore Science Centre,Fun,Science,Exhibitions,Interactive,Education,Innovation,Technology,Unique,Learning
 Orchard Road,Shopping District,Retail,Fashion,Luxury,Shopping,Malls,Dining,Entertainment,Vibrant
 Bugis Street,Shopping District,Retail,Street,Market,Fashion,Bargains,Shopping,Malls,Night
 Mustafa Centre,Shopping Mall,Retail,24-Jul,Electronics,Variety,Affordable,Cosmetics,Convenience,Cultural
@@ -199,7 +199,7 @@ Jewel Changi Airport,Shopping Mall,Retail,Dining,Entertainment,Indoor,Garden,Rai
 ION Orchard,Shopping Mall,Luxury,Brands,Retail,Fashion,Dining,Shopping,Experience,Landmark
 Clarke Quay Central,Shopping Mall,Retail,Dining,Entertainment,Riverfront,Landmark,Vibrant,Lifestyle,Fashion
 Marina Bay Sands Shoppes,Shopping Mall,Luxury,Brands,Retail,Dining,Entertainment,Canal,Architecture,Fashion
-Suntec City,Shopping Mall,Retail,Dining,Entertainment,Convention,Centre,Lifestyle,Luxury,Events
+Suntec City,Shopping Mall,Retail,Dining,Entertainment,Convention,Fountain,Lifestyle,Luxury,Events
 Westgate,Shopping Mall,Retail,Dining,Entertainment,Lifestyle,Fashion,Family-Friendly,Landmark,Urban
 JCube,Shopping Mall,Retail,Dining,Entertainment,Ice,Skating,Lifestyle,Fashion,Recreation
 Great World City,Shopping Mall,Retail,Dining,Entertainment,Lifestyle,Fashion,Family-Friendly,Landmark,Urban
