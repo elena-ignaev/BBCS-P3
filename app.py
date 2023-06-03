@@ -112,10 +112,10 @@ if __name__ == "__main__":
         distances = vectorizer.distances(target_word, words) #ordered based on orders of vocabulary it seems
         return (distances-np.min(distances))/(np.max(distances)-np.min(distances))
 
-#set list of items to avoid 
-avoid = [15, 46, 244]
-for avoidAdder in range(88, 187):
-    avoid.append(avoidAdder)
+    #set list of items to avoid 
+    avoid = [15, 46, 244]
+    for avoidAdder in range(88, 187):
+        avoid.append(avoidAdder)
 
     #function to test this 
     def gettopthree(text):
@@ -126,12 +126,14 @@ for avoidAdder in range(88, 187):
         chances = [1 for i in range(len(locTags))]
         #print(t)
         for inword in t:
+            #print("checkpoint 1")
             try:
                 scores = word_similarities(inword)
                 #print(inword)
                 #print(scores) 
                 i = 0 
                 for tags in locTags.values():
+                    #print("checkpoint 2")
                     c = 1 #chance
                     for tag in tags:
                         try: 
@@ -145,6 +147,7 @@ for avoidAdder in range(88, 187):
                     chances[i] /= 20 #punishment for not matching'''
                 #actl if it punishes all equally then nothing impt 
                 print(ex)
+        #print("checkpoint 4")
         #return chances
         s = sorted(chances)
         #print(chances)
@@ -153,34 +156,38 @@ for avoidAdder in range(88, 187):
         locations = list(locTags.keys())
         res = []
         i = 0 
-        while i < 3:
+        offset = 0 
+        while i-offset < 3:
             indices = []
             for idx, value in enumerate(chances):
                 if value == s[-1-i]:
                     if idx in avoid:
+                        i += 1 
+                        offset += 1 
                         continue
                     indices.append(idx)
-            while i < 3 and len(indices) > 0:
-                res.append(list(locTags.keys())[indices[-1]])
+            #print("indices:", indices)
+            while i-offset < 3 and len(indices) > 0:
+                res.append(locations[indices[-1]])
                 indices.pop()
                 i += 1 
         return res 
 
     #SECOND AI: ----------------------------------------------------------------------------
 
-df = pd.read_csv("LocationData.csv", header=None)
+    df = pd.read_csv("LocationData.csv", header=None)
 
-def generateDesc(name):
-    for index in range(0, df.shape[0]):
-        if df[0][index] == name:
-            line_num = index + 1
-            with open("desc.txt",'r') as file:
-                line_count=0
-                for line in file:
-                    line_count += 1
-                    if line_count == line_num:
-                        return line
-    return None  
+    def generateDesc(name):
+        for index in range(0, df.shape[0]):
+            if df[0][index] == name:
+                line_num = index + 1
+                with open("desc.txt",'r') as file:
+                    line_count=0
+                    for line in file:
+                        line_count += 1
+                        if line_count == line_num:
+                            return line
+        return None  
     
 
 #FLASK PART ------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -223,8 +230,8 @@ def shown():
     array = gettopthree(query)
 
     #-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    print("HELLLLOOOO")
-    print(array)
+    #print("HELLLLOOOO")
+    #print(array)
     img1 = get_image_location(array[0])
     img2 = get_image_location(array[1])
     img3 = get_image_location(array[2])
@@ -234,7 +241,7 @@ def shown():
     txt1 = generateDesc(array[0]) 
     txt2 = generateDesc(array[1]) 
     txt3 = generateDesc(array[2]) 
-    print(img1)
+    #print(img1)
     return render_template('suggested.html', searchquery=query, pic1=img1, pic2=img2, pic3=img3, loc1=array[0], loc2=array[1], loc3=array[2], desc1=txt1, desc2=txt2, desc3=txt3)
     # ---------------------------------------------------------------------------------------------
 
