@@ -114,7 +114,7 @@ if __name__ == "__main__":
         return (distances-np.min(distances))/(np.max(distances)-np.min(distances))
 
     #set list of items to avoid 
-    avoid = [15, 46, 244]
+    avoid = [15, 46, 244, 38]
     for avoidAdder in range(88, 187):
         avoid.append(avoidAdder)
 
